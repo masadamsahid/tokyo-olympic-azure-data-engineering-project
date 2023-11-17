@@ -17,7 +17,9 @@ The technologies used in this project are:
 
 ## Details
 
-  1. Download the datasets from Kaggle and store them in a Github repo for better accessibility.
+  1. Download the datasets from Kaggle and store them in a Github repo for better accessibility. Like [here](./data "raw data")
+      ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/8e3273a9-c8d2-476f-9c9e-6a6bd85559aa)
+
   2. Provision a Data Factory resources.
   3. Provision a Storage account to create a ADLS Gen 2. Make sure to check ✅ the `Enable hierarchical namespace` option in the `Advanced` tab.
     ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/63bf913c-0897-4d87-9002-e61fe9532882)
@@ -48,20 +50,21 @@ The technologies used in this project are:
     ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/338fb559-bbd1-493a-bc7a-7324370aa2a2)
 
   9. Create a new notebook. And do a transformation as in the `.ipynb` Python notebook. Use the saved `Application (client) ID`, `Directory (tenant) ID`, and `Client secret value` to replace the filesystem mount configuration.
-    ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/59483a91-c2bd-4bd2-bf17-cfc45c984616)
-    ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/9ece2b43-3b88-4c36-8596-143230d9e391)
+     ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/59483a91-c2bd-4bd2-bf17-cfc45c984616)
+     ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/9ece2b43-3b88-4c36-8596-143230d9e391)
+     The notebook is available [here](./Tokyo%20Olympic%20Transformation.ipynb "Databrick transformation notebook").
 
-  11. Go to the `transformed-data` directory in the data lake and check the transformed data in each directory.
+  10. Go to the `transformed-data` directory in the data lake and check the transformed data in each directory.
     ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/4f6f14fb-dcac-4ec8-a8dc-9ec87ee584ac)
     ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/65866e4e-dbb1-4280-bc1e-1e1bd1aca399)
 
-  12. Provision a Synapse Analytics Resource. And go to it after the deployment.
-  13. In the Data menu, create a new resource by clicking the `➕` button and select the `Lake database`, then name the database.
-  14. Click the created database. And then create a new table by clicking `➕ Table` dropdown and select `From data lake`. Name and link each table corresponds with each dataset (athletes, coaches, entriesgender, etc.)
+  11. Provision a Synapse Analytics Resource. And go to it after the deployment.
+  12. In the Data menu, create a new resource by clicking the `➕` button and select the `Lake database`, then name the database.
+  13. Click the created database. And then create a new table by clicking `➕ Table` dropdown and select `From data lake`. Name and link each table corresponds with each dataset (athletes, coaches, entriesgender, etc.)
     ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/edb24844-a21f-41d7-bf36-e0ad9b0bfc31)
     ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/c577c516-77c5-4ff4-b58b-d47c6222f0e1)
 
-  15. [Optional] Perform a basic SQL analytic like bellow:
+  14. [Optional] Perform a basic SQL analytic like bellow:
       ```sql
       -- count the number of athletes from each country:
       SELECT Country, COUNT(*) AS TotaAthletes
@@ -97,15 +100,15 @@ The technologies used in this project are:
       ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/888c8396-6a8f-48a8-8af2-797bbb4420ce)
 
 
-  17. Click Publish
-  18. Open a Power BI Desktop and import the data from Synapse Analytics SQL database using a  (Obtain the Serverless SQL endpoint in the Synapse Analytics Properties in the Azure Portal)
+  15. Click Publish
+  16. Open a Power BI Desktop and import the data from Synapse Analytics SQL database using a  (Obtain the Serverless SQL endpoint in the Synapse Analytics Properties in the Azure Portal)
       ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/03971118-196e-4391-9bc0-4c3aca5dc994)
       We use `Import` instead of `Direct queries` to save the synapse cost. By importing means we copy/download the database to our Power BI project so we don't need to query on the synapse SQL server while building the dashboard.
 
-  20. Manage the data relationship
+  17. Manage the data relationship
       ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/6e11adbb-b2d2-4271-9261-02d3e2dc58d8)
 
-  21. Create a visualization dashboard
+  18. Create a visualization dashboard
       ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/8cf0ef4a-d4ff-4ef9-bf2d-4c2460982059)
 
       
