@@ -2,7 +2,12 @@
 
 ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/a66499e0-4d8d-4fd4-8d0b-06cb12a8424f)
 
-This is a simple project about data engineering in Azure using the [Kaggle 2021 Olympics in Tokyo](https://www.kaggle.com/datasets/arjunprasadsarkhel/2021-olympics-in-tokyo "2021 Olympics in Tokyo") by [Arjun Prasad Sarkhel](https://www.kaggle.com/arjunprasadsarkhel "Arjun Prasad Sarkhel").
+This is a simple project about data engineering in Azure using the Kaggle 2021 Olympics in Tokyo by [Arjun Prasad Sarkhel](https://www.kaggle.com/arjunprasadsarkhel "Arjun Prasad Sarkhel").
+
+- [Used dataset](./data "raw-data")
+- [Kaggle 2021 Olympics in Tokyo (Original Dataset)](https://www.kaggle.com/datasets/arjunprasadsarkhel/2021-olympics-in-tokyo "2021 Olympics in Tokyo")
+- [Databricks transformation notebook](./Tokyo%20Olympic%20Transformation.ipynb "Databrick transformation notebook")
+- [PowerBI Dashboard Report](./Tokyo%20Olympic%20Transformation.ipynb)
 
 The technologies used in this project are:
 - Azure Data Factory
@@ -110,5 +115,6 @@ The technologies used in this project are:
 
   18. Create a visualization dashboard
       ![image](https://github.com/masadamsahid/tokyo-olympic-azure-data-engineering-project/assets/62916459/8cf0ef4a-d4ff-4ef9-bf2d-4c2460982059)
+      Created dashboar is available here: [PowerBI Dashboard Report](./Tokyo%20Olympic%20Transformation.ipynb)
 
       
